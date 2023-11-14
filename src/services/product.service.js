@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const getProducts = (callback) => {
-    axios.get('http://alan_resto_be.test/api/product')
+    axios.get('https://alan.farhanmaulidian.site/public/api/product')
         .then((response) => {
             callback(response.data.data)
         })
