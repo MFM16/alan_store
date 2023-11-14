@@ -21,7 +21,7 @@ const CreatePages = () => {
         data.append('product_photo', photo)
         data.append('product_price', e.target.price.value)
 
-        axios.post('http://alan_resto_be.test/api/product', data)
+        axios.post('https://alan.farhanmaulidian.site/public/api/product', data)
             .then((response) => {
                 navigate('/products')
             })
