@@ -4,6 +4,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import HomePages from './pages/HomePages.jsx'
 import ProductPages from './pages/ProductPages.jsx'
+import CreatePages from './pages/CreatePages.jsx'
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: '/products',
     element: <ProductPages />
+  },
+  {
+    path: '/products/tambah',
+    element: <CreatePages />
   }
 ])
 

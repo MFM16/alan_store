@@ -1,18 +1,19 @@
-const OrderCard = () => {
+const OrderCard = (props) => {
+    const { product, cart } = props
+
     return (
-        <div className='w-full flex flex-col gap-3 mt-10'>
+        <div key={product.id} div className='w-full flex flex-col gap-3' >
             <div className='w-full flex flex-row items-center gap-1'>
                 <div className='flex gap-2 items-center w-2/4'>
-                    <img className='w-20 h-16' src="./src/assets/img-1.jpg" alt="" />
-                    <span className='font-semibold text-sm'>Sate Ayam</span>
+                    <img className='w-20 h-16 rounded-sm' src={product.product_photo} alt="" />
+                    <span className='font-semibold text-sm'>{product.product_name}</span>
                 </div>
                 <div className='text-right w-1/4'>
                     <span>x</span>
-                    <span>1</span>
+                    <span>{cart.qty}</span>
                 </div>
                 <div className='text-left px-2 w-1/4 text-primary font-semibold'>
-                    <span>Rp. </span>
-                    <span>23.000</span>
+                    <span>Rp. {(product.product_price * cart.qty).toLocaleString()}</span>
                 </div>
             </div>
         </div>
